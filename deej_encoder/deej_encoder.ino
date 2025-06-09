@@ -39,8 +39,8 @@ void loop() {
     controls[i].tick();
     if (controls[i].turn()) {
       int var = 0;
-      var += (controls[i].fast() ? 5 : 1) * controls[i].dir();
-      volumeStates[i] = constrain(volumeStates[i] + var, 0, 100);
+      var += (controls[i].fast() ? 3 : 1) * controls[i].dir();
+      volumeStates[i] = constrain(volumeStates[i] + var*2, 0, 100);
       memory.update();
     }
   }
